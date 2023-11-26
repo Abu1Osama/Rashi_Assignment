@@ -7,5 +7,5 @@
  # for the FrontEnd(Rashi_frontend)
 - npm install
 - npm start
-- http://localhost:3000 or https://rashi-assignment-1olnyrndg-abu1osama.vercel.app
+- http://localhost:3000
 - 
