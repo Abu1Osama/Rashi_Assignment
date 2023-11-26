@@ -13,9 +13,10 @@ function Reel() {
   const [data, setData] = useState([]);
   const [reelindex, setReelindex] = useState(0);
 
-  console.log(movies);
+  // console.log(movies);
+  console.log(data)
   async function fetchData() {
-    const url = `https://payload-cms-000r.onrender.com/posts/videos/stream`;
+    const url = `http://localhost:3001/posts/videos/stream`;
 
     try {
       const response = await axios.get(url);
@@ -27,7 +28,7 @@ function Reel() {
         setReelindex(0);
         setIsLoading(false);
         console.log("first");
-        console.log(response.data.docs[reelindex].media[0].url);
+        console.log(response.data.docs[reelindex].media[0].filename);
       }
     } catch (error) {
       console.error(error);
@@ -89,7 +90,7 @@ function Reel() {
             <div>
               <ReactPlayer
                 preload="auto"
-                url={`../assets${data[reelindex].media[0].url}`}
+                url={`../assets/media/${data[reelindex].media[0].filename}`}
                 width="350px"
                 height="600px"
                 playing={isPlaying}
