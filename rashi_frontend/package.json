@@ -22,7 +22,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "postcss /src/index.css -o output.css",
+   "build": "tailwindcss build src/index.css -o src/styles/main.css && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
